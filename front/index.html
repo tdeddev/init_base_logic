@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            display: block;
+            max-width: 300px;
+            max-height: auto;
+            background-color: darkcyan;
+        }
+        .header{
+            color: #fff;
+            text-align: center;
+        }
+        .section{
+            color: #fff;
+            text-align: left;
+            padding-left: 3rem;
+        }
+        #message{
+            font-size: 1.3rem;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        .message.success{
+            max-width : 200px;
+            background-color: chartreuse;
+            color: black;
+        }
+        .message.danger{
+            max-width : 200px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Register Form</h1>
+        </header>
+        
+        <section class="section">
+            <form>
+                <div>
+                    <div>
+                        <span>ชื่อ</span><br>
+                        <input type="text" name="firstname" id="firstname">
+                    </div><br>
+                    <div>
+                        <span>นามสกุล</span><br>
+                        <input type="text" name="lastname" id="lastname">
+                    </div><br>
+                    <div>
+                        <span>เพศ</span><br>
+                        <input type="radio" name="gender" value="male">ชาย
+                        <input type="radio" name="gender" value="female">หญิง
+                        <input type="radio" name="gender" value="other">อื่นๆ
+                    </div><br>
+                    <div>
+                        <span>ความสนใจ</span><br>
+                        <input type="checkbox" name="interest" value="Front-End">Front-End <br>
+                        <input type="checkbox" name="interest" value="Back-End">Back-End <br>
+                        <input type="checkbox" name="interest" value="Full-Stack">Full-Stack<br>
+                    </div><br>
+                </div>
+                <div id="message"></div>
+                <button type="button" onclick="sumbit(event)">Submit</button>
+            </form> 
+        </section>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
